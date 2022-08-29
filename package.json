@@ -1,0 +1,34 @@
+{
+  "name": "micro-frontend-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:music": "cd music && yarn build",
+    "build:welcome": "cd welcome && npm run build",
+    "build:bootstrap:watch": "cd bootstrap && npm run build:watch",
+    "install:music": "cd music && yarn",
+    "install:welcome": "cd welcome && npm install",
+    "install:bootstrap": "cd bootstrap && npm install",
+    "install:all": "npm-run-all install:music install:welcome install:bootstrap",
+    "dev:bootstrap": "npm-run-all build:music build:welcome --parallel build:bootstrap:watch web-server",
+    "dev:music": "cd music && npm run start",
+    "dev:welcome": "cd welcome && npm run dev",
+    "web-server": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivivanov18/micro-frontend-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivivanov18/micro-frontend-project/issues"
+  },
+  "homepage": "https://github.com/ivivanov18/micro-frontend-project#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
